@@ -2015,49 +2015,35 @@ static NSMutableArray *recentNonces;
 	{
 		// Append the header line to the http message
 		BOOL result = [request appendData:data];
-		if (!result)
-		{
+		if (!result){
 			HTTPLogWarn(@"%@[%p]: Malformed request", THIS_FILE, self);
-			
 			[self handleInvalidRequest:data];
-		}
-		else if (![request isHeaderComplete])
-		{
+		}else if (![request isHeaderComplete]){
 			// We don't have a complete header yet
 			// That is, we haven't yet received a CRLF on a line by itself, indicating the end of the header
-			if (++numHeaderLines > MAX_HEADER_LINES)
-			{
+			if (++numHeaderLines > MAX_HEADER_LINES){
 				// Reached the maximum amount of header lines in a single HTTP request
 				// This could be an attempted DOS attack
 				[asyncSocket disconnect];
-				
 				// Explictly return to ensure we don't do anything after the socket disconnect
 				return;
-			}
-			else
-			{
+			}else{
 				[asyncSocket readDataToData:[GCDAsyncSocket CRLFData]
 				                withTimeout:TIMEOUT_READ_SUBSEQUENT_HEADER_LINE
 				                  maxLength:MAX_HEADER_LINE_LENGTH
 				                        tag:HTTP_REQUEST_HEADER];
 			}
-		}
-		else
-		{
+		}else{
 			// We have an entire HTTP request header from the client
 			
 			// Extract the method (such as GET, HEAD, POST, etc)
 			NSString *method = [request method];
-			
 			// Extract the uri (such as "/index.html")
 			NSString *uri = [self requestURI];
-			
 			// Check for a Transfer-Encoding field
 			NSString *transferEncoding = [request headerField:@"Transfer-Encoding"];
-      
 			// Check for a Content-Length field
 			NSString *contentLength = [request headerField:@"Content-Length"];
-			
 			// Content-Length MUST be present for upload methods (such as POST or PUT)
 			// and MUST NOT be present for other methods.
 			BOOL expectsUpload = [self expectsRequestBodyFromMethod:method atPath:uri];

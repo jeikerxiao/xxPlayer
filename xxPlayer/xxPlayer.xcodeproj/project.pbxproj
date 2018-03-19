@@ -43,9 +43,8 @@
 		116D547F205F93D9001841AA /* About.txt in Resources */ = {isa = PBXBuildFile; fileRef = 116D5472205F93D9001841AA /* About.txt */; };
 		116D5480205F93D9001841AA /* DDAbstractDatabaseLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 116D5474205F93D9001841AA /* DDAbstractDatabaseLogger.m */; };
 		116D5481205F93D9001841AA /* DDFileLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 116D5475205F93D9001841AA /* DDFileLogger.m */; };
-		116D5484205F93F0001841AA /* upload.html in Resources */ = {isa = PBXBuildFile; fileRef = 116D5482205F93F0001841AA /* upload.html */; };
-		116D5485205F93F0001841AA /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 116D5483205F93F0001841AA /* index.html */; };
 		116D548B205F996F001841AA /* MyHttpServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 116D548A205F996F001841AA /* MyHttpServer.m */; };
+		116D548E205FA76F001841AA /* web in Resources */ = {isa = PBXBuildFile; fileRef = 116D548D205FA76F001841AA /* web */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -137,10 +136,9 @@
 		116D5474205F93D9001841AA /* DDAbstractDatabaseLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDAbstractDatabaseLogger.m; sourceTree = "<group>"; };
 		116D5475205F93D9001841AA /* DDFileLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDFileLogger.m; sourceTree = "<group>"; };
 		116D5476205F93D9001841AA /* DDASLLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDASLLogger.h; sourceTree = "<group>"; };
-		116D5482205F93F0001841AA /* upload.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = upload.html; sourceTree = "<group>"; };
-		116D5483205F93F0001841AA /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 		116D5489205F996F001841AA /* MyHttpServer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyHttpServer.h; sourceTree = "<group>"; };
 		116D548A205F996F001841AA /* MyHttpServer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyHttpServer.m; sourceTree = "<group>"; };
+		116D548D205FA76F001841AA /* web */ = {isa = PBXFileReference; lastKnownFileType = folder; path = web; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,17 +189,13 @@
 		116D53F1205F927F001841AA /* xxPlayer */ = {
 			isa = PBXGroup;
 			children = (
+				116D53F2205F927F001841AA /* AppDelegate.h */,
+				116D53F3205F927F001841AA /* AppDelegate.m */,
 				116D5488205F9502001841AA /* View */,
 				116D5487205F94FC001841AA /* Model */,
 				116D5486205F94EF001841AA /* ViewController */,
 				116D5424205F92FE001841AA /* CocoaHttpServer */,
-				116D53F2205F927F001841AA /* AppDelegate.h */,
-				116D53F3205F927F001841AA /* AppDelegate.m */,
-				116D53F8205F927F001841AA /* Main.storyboard */,
-				116D53FB205F927F001841AA /* Assets.xcassets */,
-				116D53FD205F927F001841AA /* LaunchScreen.storyboard */,
-				116D5400205F927F001841AA /* Info.plist */,
-				116D5401205F927F001841AA /* main.m */,
+				116D548C205FA28E001841AA /* Supporting Files */,
 			);
 			path = xxPlayer;
 			sourceTree = "<group>";
@@ -227,7 +221,7 @@
 		116D5424205F92FE001841AA /* CocoaHttpServer */ = {
 			isa = PBXGroup;
 			children = (
-				116D5428205F9377001841AA /* web */,
+				116D548D205FA76F001841AA /* web */,
 				116D5427205F9354001841AA /* Custom */,
 				116D5426205F9348001841AA /* Vendor */,
 				116D5425205F933E001841AA /* Core */,
@@ -273,15 +267,6 @@
 				116D548A205F996F001841AA /* MyHttpServer.m */,
 			);
 			path = Custom;
-			sourceTree = "<group>";
-		};
-		116D5428205F9377001841AA /* web */ = {
-			isa = PBXGroup;
-			children = (
-				116D5483205F93F0001841AA /* index.html */,
-				116D5482205F93F0001841AA /* upload.html */,
-			);
-			path = web;
 			sourceTree = "<group>";
 		};
 		116D542D205F93C9001841AA /* Mime */ = {
@@ -393,6 +378,18 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		116D548C205FA28E001841AA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				116D53F8205F927F001841AA /* Main.storyboard */,
+				116D53FB205F927F001841AA /* Assets.xcassets */,
+				116D53FD205F927F001841AA /* LaunchScreen.storyboard */,
+				116D5400205F927F001841AA /* Info.plist */,
+				116D5401205F927F001841AA /* main.m */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -500,11 +497,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				116D547F205F93D9001841AA /* About.txt in Resources */,
-				116D5484205F93F0001841AA /* upload.html in Resources */,
 				116D53FF205F927F001841AA /* LaunchScreen.storyboard in Resources */,
 				116D53FC205F927F001841AA /* Assets.xcassets in Resources */,
+				116D548E205FA76F001841AA /* web in Resources */,
 				116D5478205F93D9001841AA /* About.txt in Resources */,
-				116D5485205F93F0001841AA /* index.html in Resources */,
 				116D53FA205F927F001841AA /* Main.storyboard in Resources */,
 				116D547D205F93D9001841AA /* README.txt in Resources */,
 			);
@@ -724,7 +720,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 42RLUT39J9;
-				INFOPLIST_FILE = xxPlayer/Info.plist;
+				INFOPLIST_FILE = "xxPlayer/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sinocare.xxPlayer;
@@ -741,7 +737,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 42RLUT39J9;
-				INFOPLIST_FILE = xxPlayer/Info.plist;
+				INFOPLIST_FILE = "xxPlayer/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sinocare.xxPlayer;
