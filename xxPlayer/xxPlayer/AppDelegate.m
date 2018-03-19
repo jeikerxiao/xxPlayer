@@ -11,6 +11,7 @@
 #import "DDLog.h"
 #import "DDTTYLogger.h"
 #import "MyHttpServer.h"
+#import "IPUtil.h"
 
 #import "ViewController.h"
 
@@ -66,6 +67,9 @@
     NSError *error = nil;
     if(![httpServer start:&error]){
         NSLog(@"Error starting HTTP Server: %@", error);
+    }else {
+        NSString* ip = [IPUtil getIPv4];
+        NSLog(@"Server: http://%@:8080",ip);
     }
 }
 

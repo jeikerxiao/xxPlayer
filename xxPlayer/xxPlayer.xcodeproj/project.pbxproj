@@ -45,6 +45,7 @@
 		116D5481205F93D9001841AA /* DDFileLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 116D5475205F93D9001841AA /* DDFileLogger.m */; };
 		116D548B205F996F001841AA /* MyHttpServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 116D548A205F996F001841AA /* MyHttpServer.m */; };
 		116D548E205FA76F001841AA /* web in Resources */ = {isa = PBXBuildFile; fileRef = 116D548D205FA76F001841AA /* web */; };
+		116D5494205FB664001841AA /* IPUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 116D5493205FB664001841AA /* IPUtil.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -139,6 +140,8 @@
 		116D5489205F996F001841AA /* MyHttpServer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyHttpServer.h; sourceTree = "<group>"; };
 		116D548A205F996F001841AA /* MyHttpServer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyHttpServer.m; sourceTree = "<group>"; };
 		116D548D205FA76F001841AA /* web */ = {isa = PBXFileReference; lastKnownFileType = folder; path = web; sourceTree = "<group>"; };
+		116D5492205FB664001841AA /* IPUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPUtil.h; sourceTree = "<group>"; };
+		116D5493205FB664001841AA /* IPUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IPUtil.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,6 +197,7 @@
 				116D5488205F9502001841AA /* View */,
 				116D5487205F94FC001841AA /* Model */,
 				116D5486205F94EF001841AA /* ViewController */,
+				116D5491205FB664001841AA /* Util */,
 				116D5424205F92FE001841AA /* CocoaHttpServer */,
 				116D548C205FA28E001841AA /* Supporting Files */,
 			);
@@ -390,6 +394,15 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		116D5491205FB664001841AA /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				116D5492205FB664001841AA /* IPUtil.h */,
+				116D5493205FB664001841AA /* IPUtil.m */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -547,6 +560,7 @@
 				116D5481205F93D9001841AA /* DDFileLogger.m in Sources */,
 				116D5450205F93CA001841AA /* HTTPConnection.m in Sources */,
 				116D5479205F93D9001841AA /* DDTTYLogger.m in Sources */,
+				116D5494205FB664001841AA /* IPUtil.m in Sources */,
 				116D5458205F93CA001841AA /* DDRange.m in Sources */,
 				116D5460205F93CA001841AA /* HTTPAuthenticationRequest.m in Sources */,
 				116D547E205F93D9001841AA /* DDLog.m in Sources */,
