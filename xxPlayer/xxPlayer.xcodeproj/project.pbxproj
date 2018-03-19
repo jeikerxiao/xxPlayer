@@ -45,6 +45,7 @@
 		116D5481205F93D9001841AA /* DDFileLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 116D5475205F93D9001841AA /* DDFileLogger.m */; };
 		116D5484205F93F0001841AA /* upload.html in Resources */ = {isa = PBXBuildFile; fileRef = 116D5482205F93F0001841AA /* upload.html */; };
 		116D5485205F93F0001841AA /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 116D5483205F93F0001841AA /* index.html */; };
+		116D548B205F996F001841AA /* MyHttpServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 116D548A205F996F001841AA /* MyHttpServer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -138,6 +139,8 @@
 		116D5476205F93D9001841AA /* DDASLLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDASLLogger.h; sourceTree = "<group>"; };
 		116D5482205F93F0001841AA /* upload.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = upload.html; sourceTree = "<group>"; };
 		116D5483205F93F0001841AA /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
+		116D5489205F996F001841AA /* MyHttpServer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyHttpServer.h; sourceTree = "<group>"; };
+		116D548A205F996F001841AA /* MyHttpServer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyHttpServer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,11 +191,12 @@
 		116D53F1205F927F001841AA /* xxPlayer */ = {
 			isa = PBXGroup;
 			children = (
+				116D5488205F9502001841AA /* View */,
+				116D5487205F94FC001841AA /* Model */,
+				116D5486205F94EF001841AA /* ViewController */,
 				116D5424205F92FE001841AA /* CocoaHttpServer */,
 				116D53F2205F927F001841AA /* AppDelegate.h */,
 				116D53F3205F927F001841AA /* AppDelegate.m */,
-				116D53F5205F927F001841AA /* ViewController.h */,
-				116D53F6205F927F001841AA /* ViewController.m */,
 				116D53F8205F927F001841AA /* Main.storyboard */,
 				116D53FB205F927F001841AA /* Assets.xcassets */,
 				116D53FD205F927F001841AA /* LaunchScreen.storyboard */,
@@ -265,6 +269,8 @@
 		116D5427205F9354001841AA /* Custom */ = {
 			isa = PBXGroup;
 			children = (
+				116D5489205F996F001841AA /* MyHttpServer.h */,
+				116D548A205F996F001841AA /* MyHttpServer.m */,
 			);
 			path = Custom;
 			sourceTree = "<group>";
@@ -362,6 +368,29 @@
 				116D5470205F93D9001841AA /* README.txt */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		116D5486205F94EF001841AA /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				116D53F5205F927F001841AA /* ViewController.h */,
+				116D53F6205F927F001841AA /* ViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		116D5487205F94FC001841AA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		116D5488205F9502001841AA /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -530,6 +559,7 @@
 				116D545A205F93CA001841AA /* HTTPDataResponse.m in Sources */,
 				116D5452205F93CA001841AA /* WebSocket.m in Sources */,
 				116D547B205F93D9001841AA /* ContextFilterLogFormatter.m in Sources */,
+				116D548B205F996F001841AA /* MyHttpServer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
