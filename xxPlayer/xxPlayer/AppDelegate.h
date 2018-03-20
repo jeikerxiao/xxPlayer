@@ -12,9 +12,9 @@
 @class HTTPServer;
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
-{
-    HTTPServer* httpServer;
-}
+//{
+//    HTTPServer* httpServer;
+//}
 
 @property (strong, nonatomic) UIWindow* window;
 @property (strong, nonatomic) ViewController* viewController;
