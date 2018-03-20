@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "AppDelegate.h"
+#import "IPUtil.h"
 
 @interface ViewController ()
 
@@ -22,6 +24,30 @@
 
 - (void)setupView {
     self.view.backgroundColor = [UIColor whiteColor];
+    // 默认开启服务器
+    AppDelegate *app = (AppDelegate *)[[UIApplication  sharedApplication] delegate];
+    [app startServer];
+    
+    UISwitch *switchButton = [[UISwitch alloc] initWithFrame:CGRectMake(100, 100, 20, 10)];
+    [switchButton setOn:YES];
+    [switchButton addTarget:self action:@selector(switchAction:) forControlEvents:UIControlEventValueChanged];
+    [self.view addSubview:switchButton];
+}
+
+- (void)switchAction:(id)sender {
+    AppDelegate *app = (AppDelegate *)[[UIApplication  sharedApplication] delegate];
+    UISwitch *switchButton = (UISwitch*)sender;
+    BOOL isButtonOn = [switchButton isOn];
+    if (isButtonOn) {
+        // 启动服务器
+        [app startServer];
+        NSLog(@"开");
+    } else {
+        // 关闭服务器
+        [app stopServer];
+        NSLog(@"关");
+    }
+    
 }
 
 @end

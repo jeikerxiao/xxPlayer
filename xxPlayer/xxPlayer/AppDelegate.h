@@ -11,12 +11,17 @@
 @class ViewController;
 @class HTTPServer;
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>{
-    HTTPServer *httpServer;
+@interface AppDelegate : UIResponder <UIApplicationDelegate>
+{
+    HTTPServer* httpServer;
 }
 
-@property (strong, nonatomic) UIWindow *window;
-@property (strong, nonatomic) ViewController *viewController;
+@property (strong, nonatomic) UIWindow* window;
+@property (strong, nonatomic) ViewController* viewController;
+@property (strong, nonatomic) HTTPServer* httpServer;
+
+- (void)startServer;
+- (void)stopServer;
 
 @end
 
