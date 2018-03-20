@@ -1,0 +1,13 @@
+platform :ios, '8.0'
+use_frameworks!
+
+target "xxPlayer" do
+    
+    #pod 'Masonry'
+    #pod 'MJRefresh' 
+    pod 'SDWebImage'
+    #pod 'MBProgressHUD'
+
+    pod 'KYVedioPlayer'
+end
+
