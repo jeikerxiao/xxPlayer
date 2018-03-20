@@ -349,13 +349,17 @@
 -(void)kyvedioPlayer:(KYVedioPlayer *)kyvedioPlayer clickedFullScreenButton:(UIButton *)fullScreenBtn{
     NSLog(@"[KYVedioPlayer] clickedFullScreenButton ");
     
-    if (fullScreenBtn.isSelected) {//全屏显示
+    if (fullScreenBtn.isSelected) {
+        // 全屏显示
         self.navigationController.navigationBarHidden = YES;
+        self.tabBarController.tabBar.hidden = YES;
         kyvedioPlayer.isFullscreen = YES;
         [self setNeedsStatusBarAppearanceUpdate];
         [kyvedioPlayer showFullScreenWithInterfaceOrientation:UIInterfaceOrientationLandscapeLeft player:kyvedioPlayer withFatherView:self.view];
     }else{
+        // 退出全屏
         self.navigationController.navigationBarHidden = NO;
+        self.tabBarController.tabBar.hidden = NO;
         [self showCellCurrentVedioPlayer];
         
     }
