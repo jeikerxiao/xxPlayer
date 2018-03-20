@@ -13,7 +13,7 @@
 #import "MyHttpServer.h"
 #import "IPUtil.h"
 
-#import "ViewController.h"
+#import "JDLTabBarController.h"
 
 @interface AppDelegate ()
 
@@ -38,9 +38,9 @@
     // 1.系统创建window
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // 2.初始化视图
-    self.viewController = [[ViewController alloc] init];
+    JDLTabBarController *tabbarVc =[[JDLTabBarController alloc] init];
     // 3.添加视图到根控制器
-    self.window.rootViewController = self.viewController;
+    self.window.rootViewController = tabbarVc;
     // 4.设置为主窗口并显示出来
     [self.window makeKeyAndVisible];
 }

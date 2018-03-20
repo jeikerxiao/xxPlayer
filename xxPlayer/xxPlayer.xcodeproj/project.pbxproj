@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1154E4222060B1E3002F9D37 /* UIImage+Image.m in Sources */ = {isa = PBXBuildFile; fileRef = 1154E41F2060B1E3002F9D37 /* UIImage+Image.m */; };
+		1154E4232060B1E3002F9D37 /* UITabBarController+tabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1154E4202060B1E3002F9D37 /* UITabBarController+tabBarController.m */; };
+		1154E4292060B1F2002F9D37 /* JDLTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 1154E4272060B1F2002F9D37 /* JDLTabBar.m */; };
+		1154E42A2060B1F2002F9D37 /* JDLTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1154E4282060B1F2002F9D37 /* JDLTabBarController.m */; };
+		1154E4322060B380002F9D37 /* XXBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1154E4312060B380002F9D37 /* XXBaseViewController.m */; };
+		1154E4352060B38F002F9D37 /* XXHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1154E4342060B38F002F9D37 /* XXHomeViewController.m */; };
+		1154E4382060B3A0002F9D37 /* XXVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1154E4372060B3A0002F9D37 /* XXVideoViewController.m */; };
+		1154E43B2060B3AE002F9D37 /* XXPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1154E43A2060B3AE002F9D37 /* XXPictureViewController.m */; };
+		1154E43E2060B3B7002F9D37 /* XXMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1154E43D2060B3B7002F9D37 /* XXMeViewController.m */; };
 		116D53F4205F927F001841AA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 116D53F3205F927F001841AA /* AppDelegate.m */; };
 		116D53F7205F927F001841AA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 116D53F6205F927F001841AA /* ViewController.m */; };
 		116D53FA205F927F001841AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 116D53F8205F927F001841AA /* Main.storyboard */; };
@@ -66,6 +75,24 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1154E41E2060B1E3002F9D37 /* UITabBarController+tabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBarController+tabBarController.h"; sourceTree = "<group>"; };
+		1154E41F2060B1E3002F9D37 /* UIImage+Image.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Image.m"; sourceTree = "<group>"; };
+		1154E4202060B1E3002F9D37 /* UITabBarController+tabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBarController+tabBarController.m"; sourceTree = "<group>"; };
+		1154E4212060B1E3002F9D37 /* UIImage+Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Image.h"; sourceTree = "<group>"; };
+		1154E4252060B1F2002F9D37 /* JDLTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDLTabBar.h; sourceTree = "<group>"; };
+		1154E4262060B1F2002F9D37 /* JDLTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDLTabBarController.h; sourceTree = "<group>"; };
+		1154E4272060B1F2002F9D37 /* JDLTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDLTabBar.m; sourceTree = "<group>"; };
+		1154E4282060B1F2002F9D37 /* JDLTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDLTabBarController.m; sourceTree = "<group>"; };
+		1154E4302060B380002F9D37 /* XXBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XXBaseViewController.h; sourceTree = "<group>"; };
+		1154E4312060B380002F9D37 /* XXBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XXBaseViewController.m; sourceTree = "<group>"; };
+		1154E4332060B38F002F9D37 /* XXHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XXHomeViewController.h; sourceTree = "<group>"; };
+		1154E4342060B38F002F9D37 /* XXHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XXHomeViewController.m; sourceTree = "<group>"; };
+		1154E4362060B3A0002F9D37 /* XXVideoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XXVideoViewController.h; sourceTree = "<group>"; };
+		1154E4372060B3A0002F9D37 /* XXVideoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XXVideoViewController.m; sourceTree = "<group>"; };
+		1154E4392060B3AE002F9D37 /* XXPictureViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XXPictureViewController.h; sourceTree = "<group>"; };
+		1154E43A2060B3AE002F9D37 /* XXPictureViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XXPictureViewController.m; sourceTree = "<group>"; };
+		1154E43C2060B3B7002F9D37 /* XXMeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XXMeViewController.h; sourceTree = "<group>"; };
+		1154E43D2060B3B7002F9D37 /* XXMeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XXMeViewController.m; sourceTree = "<group>"; };
 		116D53EF205F927F001841AA /* xxPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = xxPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		116D53F2205F927F001841AA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		116D53F3205F927F001841AA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -169,6 +196,73 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1154E41D2060B1E3002F9D37 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				1154E41E2060B1E3002F9D37 /* UITabBarController+tabBarController.h */,
+				1154E41F2060B1E3002F9D37 /* UIImage+Image.m */,
+				1154E4202060B1E3002F9D37 /* UITabBarController+tabBarController.m */,
+				1154E4212060B1E3002F9D37 /* UIImage+Image.h */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		1154E4242060B1F2002F9D37 /* CustomTabbar */ = {
+			isa = PBXGroup;
+			children = (
+				1154E4252060B1F2002F9D37 /* JDLTabBar.h */,
+				1154E4272060B1F2002F9D37 /* JDLTabBar.m */,
+				1154E4262060B1F2002F9D37 /* JDLTabBarController.h */,
+				1154E4282060B1F2002F9D37 /* JDLTabBarController.m */,
+			);
+			path = CustomTabbar;
+			sourceTree = "<group>";
+		};
+		1154E42B2060B2C9002F9D37 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				1154E4332060B38F002F9D37 /* XXHomeViewController.h */,
+				1154E4342060B38F002F9D37 /* XXHomeViewController.m */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		1154E42C2060B315002F9D37 /* Picture */ = {
+			isa = PBXGroup;
+			children = (
+				1154E4392060B3AE002F9D37 /* XXPictureViewController.h */,
+				1154E43A2060B3AE002F9D37 /* XXPictureViewController.m */,
+			);
+			path = Picture;
+			sourceTree = "<group>";
+		};
+		1154E42D2060B330002F9D37 /* Video */ = {
+			isa = PBXGroup;
+			children = (
+				1154E4362060B3A0002F9D37 /* XXVideoViewController.h */,
+				1154E4372060B3A0002F9D37 /* XXVideoViewController.m */,
+			);
+			path = Video;
+			sourceTree = "<group>";
+		};
+		1154E42E2060B345002F9D37 /* Me */ = {
+			isa = PBXGroup;
+			children = (
+				1154E43C2060B3B7002F9D37 /* XXMeViewController.h */,
+				1154E43D2060B3B7002F9D37 /* XXMeViewController.m */,
+			);
+			path = Me;
+			sourceTree = "<group>";
+		};
+		1154E42F2060B354002F9D37 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				1154E4302060B380002F9D37 /* XXBaseViewController.h */,
+				1154E4312060B380002F9D37 /* XXBaseViewController.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 		116D53E6205F927F001841AA = {
 			isa = PBXGroup;
 			children = (
@@ -198,7 +292,9 @@
 				116D5487205F94FC001841AA /* Model */,
 				116D5486205F94EF001841AA /* ViewController */,
 				116D5491205FB664001841AA /* Util */,
+				1154E41D2060B1E3002F9D37 /* Category */,
 				116D5424205F92FE001841AA /* CocoaHttpServer */,
+				1154E4242060B1F2002F9D37 /* CustomTabbar */,
 				116D548C205FA28E001841AA /* Supporting Files */,
 			);
 			path = xxPlayer;
@@ -362,6 +458,11 @@
 		116D5486205F94EF001841AA /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				1154E42F2060B354002F9D37 /* Base */,
+				1154E42B2060B2C9002F9D37 /* Home */,
+				1154E42D2060B330002F9D37 /* Video */,
+				1154E42C2060B315002F9D37 /* Picture */,
+				1154E42E2060B345002F9D37 /* Me */,
 				116D53F5205F927F001841AA /* ViewController.h */,
 				116D53F6205F927F001841AA /* ViewController.m */,
 			);
@@ -544,10 +645,14 @@
 				116D5454205F93CA001841AA /* MultipartFormDataParser.m in Sources */,
 				116D545B205F93CA001841AA /* HTTPDynamicFileResponse.m in Sources */,
 				116D5453205F93CA001841AA /* MultipartMessageHeaderField.m in Sources */,
+				1154E4222060B1E3002F9D37 /* UIImage+Image.m in Sources */,
 				116D545D205F93CA001841AA /* HTTPAsyncFileResponse.m in Sources */,
 				116D5480205F93D9001841AA /* DDAbstractDatabaseLogger.m in Sources */,
 				116D547C205F93D9001841AA /* DispatchQueueLogFormatter.m in Sources */,
 				116D5402205F927F001841AA /* main.m in Sources */,
+				1154E4382060B3A0002F9D37 /* XXVideoViewController.m in Sources */,
+				1154E4352060B38F002F9D37 /* XXHomeViewController.m in Sources */,
+				1154E4232060B1E3002F9D37 /* UITabBarController+tabBarController.m in Sources */,
 				116D547A205F93D9001841AA /* DDASLLogger.m in Sources */,
 				116D5459205F93CA001841AA /* HTTPErrorResponse.m in Sources */,
 				116D5451205F93CA001841AA /* HTTPMessage.m in Sources */,
@@ -557,18 +662,23 @@
 				116D5455205F93CA001841AA /* MultipartMessageHeader.m in Sources */,
 				116D5477205F93D9001841AA /* GCDAsyncSocket.m in Sources */,
 				116D5457205F93CA001841AA /* DDData.m in Sources */,
+				1154E4292060B1F2002F9D37 /* JDLTabBar.m in Sources */,
 				116D5481205F93D9001841AA /* DDFileLogger.m in Sources */,
+				1154E43B2060B3AE002F9D37 /* XXPictureViewController.m in Sources */,
 				116D5450205F93CA001841AA /* HTTPConnection.m in Sources */,
 				116D5479205F93D9001841AA /* DDTTYLogger.m in Sources */,
 				116D5494205FB664001841AA /* IPUtil.m in Sources */,
 				116D5458205F93CA001841AA /* DDRange.m in Sources */,
 				116D5460205F93CA001841AA /* HTTPAuthenticationRequest.m in Sources */,
+				1154E42A2060B1F2002F9D37 /* JDLTabBarController.m in Sources */,
+				1154E4322060B380002F9D37 /* XXBaseViewController.m in Sources */,
 				116D547E205F93D9001841AA /* DDLog.m in Sources */,
 				116D545C205F93CA001841AA /* HTTPFileResponse.m in Sources */,
 				116D5456205F93CA001841AA /* DDNumber.m in Sources */,
 				116D545A205F93CA001841AA /* HTTPDataResponse.m in Sources */,
 				116D5452205F93CA001841AA /* WebSocket.m in Sources */,
 				116D547B205F93D9001841AA /* ContextFilterLogFormatter.m in Sources */,
+				1154E43E2060B3B7002F9D37 /* XXMeViewController.m in Sources */,
 				116D548B205F996F001841AA /* MyHttpServer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
