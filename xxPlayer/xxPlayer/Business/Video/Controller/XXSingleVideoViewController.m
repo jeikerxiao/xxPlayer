@@ -50,9 +50,8 @@
                                                object:nil
      ];
     self.navigationController.navigationBarHidden = YES;
-    
 }
--(void)viewDidDisappear:(BOOL)animated{
+- (void)viewDidDisappear:(BOOL)animated{
     self.navigationController.navigationBarHidden = NO;
     [super viewDidAppear:animated];
 }
@@ -61,7 +60,6 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
 
 /**
  *  注销播放器
@@ -82,19 +80,10 @@
 /**
  *  隐藏状态栏
  **/
--(BOOL)prefersStatusBarHidden{
+- (BOOL)prefersStatusBarHidden{
     return YES;
 }
 
-/*
- #pragma mark - Navigation
- 
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
- // Get the new view controller using [segue destinationViewController].
- // Pass the selected object to the new view controller.
- }
- */
 #pragma mark - KYVedioPlayerDelegate 播放器委托方法
 //点击播放暂停按钮代理方法
 -(void)kyvedioPlayer:(KYVedioPlayer *)kyvedioPlayer clickedPlayOrPauseButton:(UIButton *)playOrPauseBtn{
@@ -117,56 +106,58 @@
     }
 }
 //点击分享按钮代理方法
--(void)kyvedioPlayer:(KYVedioPlayer *)kyvedioPlayer onClickShareBtn:(UIButton *)closeBtn{
+- (void)kyvedioPlayer:(KYVedioPlayer *)kyvedioPlayer onClickShareBtn:(UIButton *)closeBtn{
     
     NSLog(@"[KYVedioPlayer] onClickShareBtn ");
     
 }
 //点击全屏按钮代理方法
--(void)kyvedioPlayer:(KYVedioPlayer *)kyvedioPlayer clickedFullScreenButton:(UIButton *)fullScreenBtn{
+- (void)kyvedioPlayer:(KYVedioPlayer *)kyvedioPlayer clickedFullScreenButton:(UIButton *)fullScreenBtn{
     NSLog(@"[KYVedioPlayer] clickedFullScreenButton ");
     
-    if (fullScreenBtn.isSelected) {//全屏显示
-        
+    if (fullScreenBtn.isSelected) {
+        // 全屏显示
         kyvedioPlayer.isFullscreen = YES;
+        self.tabBarController.tabBar.hidden = YES;
         [self setNeedsStatusBarAppearanceUpdate];
         [kyvedioPlayer showFullScreenWithInterfaceOrientation:UIInterfaceOrientationLandscapeLeft player:kyvedioPlayer withFatherView:self.view];
     }else{
-        
+        // 退出全屏
+        self.tabBarController.tabBar.hidden = NO;
         [self setNeedsStatusBarAppearanceUpdate];
         [kyvedioPlayer showSmallScreenWithPlayer:kyvedioPlayer withFatherView:self.view withFrame:playerFrame];
     }
     
 }
 //单击WMPlayer的代理方法
--(void)kyvedioPlayer:(KYVedioPlayer *)kyvedioPlayer singleTaped:(UITapGestureRecognizer *)singleTap{
+- (void)kyvedioPlayer:(KYVedioPlayer *)kyvedioPlayer singleTaped:(UITapGestureRecognizer *)singleTap{
     
     NSLog(@"[KYVedioPlayer] singleTaped ");
 }
 //双击WMPlayer的代理方法
--(void)kyvedioPlayer:(KYVedioPlayer *)kyvedioPlayer doubleTaped:(UITapGestureRecognizer *)doubleTap{
+- (void)kyvedioPlayer:(KYVedioPlayer *)kyvedioPlayer doubleTaped:(UITapGestureRecognizer *)doubleTap{
     
     NSLog(@"[KYVedioPlayer] doubleTaped ");
 }
 
 ///播放状态
 //播放失败的代理方法
--(void)kyvedioPlayerFailedPlay:(KYVedioPlayer *)kyvedioPlayer playerStatus:(KYVedioPlayerState)state{
+- (void)kyvedioPlayerFailedPlay:(KYVedioPlayer *)kyvedioPlayer playerStatus:(KYVedioPlayerState)state{
     NSLog(@"[KYVedioPlayer] kyvedioPlayerFailedPlay  播放失败");
 }
 //准备播放的代理方法
--(void)kyvedioPlayerReadyToPlay:(KYVedioPlayer *)kyvedioPlayer playerStatus:(KYVedioPlayerState)state{
+- (void)kyvedioPlayerReadyToPlay:(KYVedioPlayer *)kyvedioPlayer playerStatus:(KYVedioPlayerState)state{
     
     NSLog(@"[KYVedioPlayer] kyvedioPlayerReadyToPlay  准备播放");
 }
 //播放完毕的代理方法
--(void)kyplayerFinishedPlay:(KYVedioPlayer *)kyvedioPlayer{
+- (void)kyplayerFinishedPlay:(KYVedioPlayer *)kyvedioPlayer{
     
     NSLog(@"[KYVedioPlayer] kyvedioPlayerReadyToPlay  播放完毕");
 }
 
 #pragma mark - NotificationDeviceOrientationChange
--(void)NotificationDeviceOrientationChange:(NSNotification *)notification{
+- (void)NotificationDeviceOrientationChange:(NSNotification *)notification{
     
     if (vedioPlayer == nil|| vedioPlayer.superview==nil){
         return;
@@ -205,6 +196,5 @@
         default:
             break;
     }
-    
 }
 @end
