@@ -6,15 +6,15 @@
 //  Copyright © 2018年 jeikerxiao. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "XXHttpServerViewController.h"
 #import "AppDelegate.h"
 #import "IPUtil.h"
 
-@interface ViewController ()
+@interface XXHttpServerViewController ()
 
 @end
 
-@implementation ViewController
+@implementation XXHttpServerViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

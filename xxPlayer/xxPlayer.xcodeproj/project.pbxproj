@@ -21,7 +21,7 @@
 		1154E4B42060FEF1002F9D37 /* XXVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1154E4AF2060FEF1002F9D37 /* XXVideo.m */; };
 		1154E4B62060FF4F002F9D37 /* 贝加尔湖畔.3gp in Resources */ = {isa = PBXBuildFile; fileRef = 1154E4B52060FF3B002F9D37 /* 贝加尔湖畔.3gp */; };
 		116D53F4205F927F001841AA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 116D53F3205F927F001841AA /* AppDelegate.m */; };
-		116D53F7205F927F001841AA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 116D53F6205F927F001841AA /* ViewController.m */; };
+		116D53F7205F927F001841AA /* XXHttpServerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 116D53F6205F927F001841AA /* XXHttpServerViewController.m */; };
 		116D53FA205F927F001841AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 116D53F8205F927F001841AA /* Main.storyboard */; };
 		116D53FC205F927F001841AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 116D53FB205F927F001841AA /* Assets.xcassets */; };
 		116D53FF205F927F001841AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 116D53FD205F927F001841AA /* LaunchScreen.storyboard */; };
@@ -108,8 +108,8 @@
 		116D53EF205F927F001841AA /* xxPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = xxPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		116D53F2205F927F001841AA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		116D53F3205F927F001841AA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		116D53F5205F927F001841AA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		116D53F6205F927F001841AA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		116D53F5205F927F001841AA /* XXHttpServerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XXHttpServerViewController.h; sourceTree = "<group>"; };
+		116D53F6205F927F001841AA /* XXHttpServerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XXHttpServerViewController.m; sourceTree = "<group>"; };
 		116D53F9205F927F001841AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		116D53FB205F927F001841AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		116D53FE205F927F001841AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -287,6 +287,8 @@
 				1154E4AA2060FEF1002F9D37 /* XXVideoViewController.m */,
 				1154E4A72060FEF1002F9D37 /* XXSingleVideoViewController.h */,
 				1154E4A92060FEF1002F9D37 /* XXSingleVideoViewController.m */,
+				116D53F5205F927F001841AA /* XXHttpServerViewController.h */,
+				116D53F6205F927F001841AA /* XXHttpServerViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -509,8 +511,6 @@
 				1154E42D2060B330002F9D37 /* Video */,
 				1154E42C2060B315002F9D37 /* Picture */,
 				1154E42E2060B345002F9D37 /* Me */,
-				116D53F5205F927F001841AA /* ViewController.h */,
-				116D53F6205F927F001841AA /* ViewController.m */,
 			);
 			path = Business;
 			sourceTree = "<group>";
@@ -753,7 +753,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				116D53F7205F927F001841AA /* ViewController.m in Sources */,
+				116D53F7205F927F001841AA /* XXHttpServerViewController.m in Sources */,
 				116D5454205F93CA001841AA /* MultipartFormDataParser.m in Sources */,
 				116D545B205F93CA001841AA /* HTTPDynamicFileResponse.m in Sources */,
 				1154E4B12060FEF1002F9D37 /* XXSingleVideoViewController.m in Sources */,

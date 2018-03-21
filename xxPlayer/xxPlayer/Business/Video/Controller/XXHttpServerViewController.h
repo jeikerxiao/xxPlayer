@@ -6,9 +6,9 @@
 //  Copyright © 2018年 jeikerxiao. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "XXBaseViewController.h"
 
-@interface ViewController : UIViewController
+@interface XXHttpServerViewController : XXBaseViewController
 
 
 @end

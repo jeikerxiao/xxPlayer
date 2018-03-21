@@ -8,6 +8,7 @@
 
 #import "XXVideoViewController.h"
 #import "XXSingleVideoViewController.h"
+#import "XXHttpServerViewController.h"
 #import "KYVedioPlayer.h"
 #import "XXVideoCell.h"
 
@@ -30,7 +31,7 @@
     [self setUpView];
 }
 
--(BOOL)prefersStatusBarHidden{
+- (BOOL)prefersStatusBarHidden{
     if (vedioPlayer) {
         if (vedioPlayer.isFullscreen) {
             return YES;
@@ -42,7 +43,7 @@
     }
 }
 
--(XXVideoCell *)currentCell{
+- (XXVideoCell *)currentCell{
     if (currentIndexPath==nil) {
         return nil;
     }
@@ -53,7 +54,7 @@
 /**
  * 显示 从全屏来当前的cell视频
  **/
--(void)showCellCurrentVedioPlayer{
+- (void)showCellCurrentVedioPlayer{
     
     if (currentVideo != nil &&  currentIndexPath != nil) {
         
@@ -107,6 +108,7 @@
 #pragma  mark - 初始化方法
 - (void)setUpView {
     self.view.backgroundColor = [UIColor whiteColor];
+    // tableView
     self.tableView = ({
         UITableView *tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
         tableView.delegate = self;
@@ -115,11 +117,24 @@
         tableView;
     });
     [self.view addSubview:self.tableView];
+    // httpServer
+    UIBarButtonItem *button = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(httpServer)];
+    self.navigationItem.rightBarButtonItem = button;
 }
 
 - (void)viewWillLayoutSubviews {
     [super viewWillLayoutSubviews];
     self.tableView.frame = self.view.bounds;
+}
+
+- (void)httpServer {
+    NSLog(@"httpServer VC");
+    
+    XXHttpServerViewController *httpServerVC = [[XXHttpServerViewController alloc] init];
+    UIBarButtonItem *backItem = [[UIBarButtonItem alloc] init];
+    backItem.title = @"返回";
+    self.navigationItem.backBarButtonItem = backItem;
+    [self.navigationController pushViewController:httpServerVC animated:YES];
 }
 
 /**
@@ -310,7 +325,7 @@
 /**
  * 关闭当前cell 中的 视频
  **/
--(void)closeCurrentCellVedioPlayer{
+- (void)closeCurrentCellVedioPlayer{
     
     if (currentVideo != nil &&  currentIndexPath != nil) {
         XXVideoCell *currentCell = [self currentCell];
@@ -323,12 +338,12 @@
 
 #pragma mark - KYVedioPlayerDelegate 播放器委托方法
 //点击播放暂停按钮代理方法
--(void)kyvedioPlayer:(KYVedioPlayer *)kyvedioPlayer clickedPlayOrPauseButton:(UIButton *)playOrPauseBtn{
+- (void)kyvedioPlayer:(KYVedioPlayer *)kyvedioPlayer clickedPlayOrPauseButton:(UIButton *)playOrPauseBtn{
     
     NSLog(@"[KYVedioPlayer] clickedPlayOrPauseButton ");
 }
 //点击关闭按钮代理方法
--(void)kyvedioPlayer:(KYVedioPlayer *)kyvedioPlayer clickedCloseButton:(UIButton *)closeBtn{
+- (void)kyvedioPlayer:(KYVedioPlayer *)kyvedioPlayer clickedCloseButton:(UIButton *)closeBtn{
     
     NSLog(@"[KYVedioPlayer] clickedCloseButton ");
     
@@ -342,11 +357,11 @@
     
 }
 //点击分享按钮代理方法
--(void)kyvedioPlayer:(KYVedioPlayer *)kyvedioPlayer onClickShareBtn:(UIButton *)closeBtn{
+- (void)kyvedioPlayer:(KYVedioPlayer *)kyvedioPlayer onClickShareBtn:(UIButton *)closeBtn{
     NSLog(@"[KYVedioPlayer] onClickShareBtn ");
 }
 //点击全屏按钮代理方法
--(void)kyvedioPlayer:(KYVedioPlayer *)kyvedioPlayer clickedFullScreenButton:(UIButton *)fullScreenBtn{
+- (void)kyvedioPlayer:(KYVedioPlayer *)kyvedioPlayer clickedFullScreenButton:(UIButton *)fullScreenBtn{
     NSLog(@"[KYVedioPlayer] clickedFullScreenButton ");
     
     if (fullScreenBtn.isSelected) {
@@ -365,28 +380,28 @@
     }
 }
 //单击WMPlayer的代理方法
--(void)kyvedioPlayer:(KYVedioPlayer *)kyvedioPlayer singleTaped:(UITapGestureRecognizer *)singleTap{
+- (void)kyvedioPlayer:(KYVedioPlayer *)kyvedioPlayer singleTaped:(UITapGestureRecognizer *)singleTap{
     
     NSLog(@"[KYVedioPlayer] singleTaped ");
 }
 //双击WMPlayer的代理方法
--(void)kyvedioPlayer:(KYVedioPlayer *)kyvedioPlayer doubleTaped:(UITapGestureRecognizer *)doubleTap{
+- (void)kyvedioPlayer:(KYVedioPlayer *)kyvedioPlayer doubleTaped:(UITapGestureRecognizer *)doubleTap{
     
     NSLog(@"[KYVedioPlayer] doubleTaped ");
 }
 
 ///播放状态
 //播放失败的代理方法
--(void)kyvedioPlayerFailedPlay:(KYVedioPlayer *)kyvedioPlayer playerStatus:(KYVedioPlayerState)state{
+- (void)kyvedioPlayerFailedPlay:(KYVedioPlayer *)kyvedioPlayer playerStatus:(KYVedioPlayerState)state{
     NSLog(@"[KYVedioPlayer] kyvedioPlayerFailedPlay  播放失败");
 }
 //准备播放的代理方法
--(void)kyvedioPlayerReadyToPlay:(KYVedioPlayer *)kyvedioPlayer playerStatus:(KYVedioPlayerState)state{
+- (void)kyvedioPlayerReadyToPlay:(KYVedioPlayer *)kyvedioPlayer playerStatus:(KYVedioPlayerState)state{
     
     NSLog(@"[KYVedioPlayer] kyvedioPlayerReadyToPlay  准备播放");
 }
 //播放完毕的代理方法
--(void)kyplayerFinishedPlay:(KYVedioPlayer *)kyvedioPlayer{
+- (void)kyplayerFinishedPlay:(KYVedioPlayer *)kyvedioPlayer{
     
     NSLog(@"[KYVedioPlayer] kyvedioPlayerReadyToPlay  播放完毕");
     [self closeCurrentCellVedioPlayer];
