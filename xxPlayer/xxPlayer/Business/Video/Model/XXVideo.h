@@ -14,10 +14,12 @@
 @property (nonatomic, strong) NSString * image;
 @property (nonatomic, strong) NSString * video;
 
+@property (nonatomic, strong) UIImage *picture;
+
 /**
  *自定义cell的高度
  */
-@property (nonatomic,assign) CGFloat curCellHeight;
+@property (nonatomic, assign) CGFloat curCellHeight;
 @property (nonatomic, strong) NSIndexPath *indexPath;
 
 @end

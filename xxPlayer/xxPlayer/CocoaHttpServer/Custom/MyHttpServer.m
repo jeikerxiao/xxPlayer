@@ -130,8 +130,13 @@ static const int httpLogLevel = HTTP_LOG_LEVEL_VERBOSE; // | HTTP_LOG_FLAG_TRACE
     if ( (nil == filename) || [filename isEqualToString: @""] ) {
         // 不是一个文件，则直接不处理
 		return;
-	}    
-	NSString* uploadDirPath = [[config documentRoot] stringByAppendingPathComponent:@"upload"];
+	}
+    // 获取Documents目录路径
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *docDir = [paths objectAtIndex:0];
+//    NSString* uploadDirPath = [[config documentRoot] stringByAppendingPathComponent:@"upload"];
+    NSString *uploadDirPath = [docDir stringByAppendingPathComponent:@"upload"];
+    NSLog(@"uploadDirPath: %@", uploadDirPath);
 
 	BOOL isDir = YES;
 	if (![[NSFileManager defaultManager]fileExistsAtPath:uploadDirPath isDirectory:&isDir ]) {

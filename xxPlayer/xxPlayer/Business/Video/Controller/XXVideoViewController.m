@@ -11,6 +11,9 @@
 #import "XXHttpServerViewController.h"
 #import "KYVedioPlayer.h"
 #import "XXVideoCell.h"
+#import "XXVideoUtil.h"
+#import "XXFileUtil.h"
+
 
 @interface XXVideoViewController ()<UITableViewDelegate, UITableViewDataSource,XXVideoCellDelegate,KYVedioPlayerDelegate>
 
@@ -29,6 +32,14 @@
     [super viewDidLoad];
 
     [self setUpView];
+    
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    _dataSource = [self reloadDataSource];
+    [self.tableView reloadData];
 }
 
 - (BOOL)prefersStatusBarHidden{
@@ -137,57 +148,24 @@
     [self.navigationController pushViewController:httpServerVC animated:YES];
 }
 
-/**
- * Lazy 加载数据
- **/
-- (NSArray *)dataSource {
-    if (_dataSource) {
-        return _dataSource;
-    }
-    NSString *path3gp = [[NSBundle mainBundle] pathForResource:@"贝加尔湖畔" ofType:@"3gp"];
-    NSArray *arr = @[
-                     
-                     @{@"title":@"视频一 mp4 格式",
-                       @"image":@"http://vimg3.ws.126.net/image/snapshot/2016/9/L/1/VBVQVQRL1.jpg",
-                       @"video":@"http://flv2.bn.netease.com/videolib3/1609/12/yRxoB7561/SD/yRxoB7561-mobile.mp4"},
-                     
-                     @{@"title":@"视频二 m3u8格式",
-                       @"image":@"http://vimg2.ws.126.net/image/snapshot/2016/9/7/7/VBV4B7Q77.jpg",
-                       @"video":@"http://flv2.bn.netease.com/videolib3/1609/03/WotPc9077/SD/movie_index.m3u8"},
-                     
-                     @{@"title":@"视频三 mov格式",
-                       @"image":@"http://img2.cache.netease.com/m/3g/mengchong.png",
-                       @"video":@"http://movies.apple.com/media/us/iphone/2010/tours/apple-iphone4-design_video-us-20100607_848x480.mov"},
-                     
-                     @{@"title":@"视频四 3gp格式",
-                       @"image":@"http://wimg.spriteapp.cn/picture/2016/0309/56df7b64b4416_wpd.jpg",
-                       @"video":path3gp},
-                     
-                     @{@"title":@"视频五",
-                       @"image":@"http://vimg3.ws.126.net/image/snapshot/2016/9/A/G/VBV4BB5AG.jpg",
-                       @"video":@"http://flv2.bn.netease.com/videolib3/1609/03/GVRLQ8933/SD/movie_index.m3u8"},
-                     
-                     @{@"title":@"视频六",
-                       @"image":@"http://vimg3.ws.126.net/image/snapshot/2016/9/5/1/VBV4BEH51.jpg",
-                       @"video":@"http://flv2.bn.netease.com/videolib3/1609/03/lGPqA9142/SD/lGPqA9142-mobile.mp4"},
-                     
-                     @{@"title":@"视频七",
-                       @"image":@"http://vimg3.ws.126.net/image/snapshot/2016/9/U/R/VBVQV83UR.jpg",
-                       @"video":@"http://flv2.bn.netease.com/videolib3/1609/12/aOzvT5225/HD/movie_index.m3u8"},
-                     
-                     ];
-    
+- (NSMutableArray *) reloadDataSource {
+    // 获取Documents目录路径
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *docDir = [paths objectAtIndex:0];
+    NSString *uploadDirPath = [docDir stringByAppendingPathComponent:@"upload"];
+    NSArray *fileList = [[NSFileManager  defaultManager]  contentsOfDirectoryAtPath:uploadDirPath error:nil];
+
+    NSLog(@"fileList: %@", fileList);
     NSMutableArray *arrVideo = [NSMutableArray array];
-    for (NSDictionary *video in arr) {
+    for (NSString * pathStr in fileList) {
+        NSLog(@"视频地址 :%@/%@",uploadDirPath,pathStr);
         XXVideo *xxVideo = [[XXVideo alloc] init];
-        xxVideo.title = [video objectForKey:@"title"];
-        xxVideo.image = [video objectForKey:@"image"];
-        xxVideo.video = [video objectForKey:@"video"];
-        
+        xxVideo.title = pathStr;
+        xxVideo.image = @"http://img05.tooopen.com/images/20150613/tooopen_sy_130221399593.jpg";
+        xxVideo.video = [NSString stringWithFormat:@"%@/%@", uploadDirPath, pathStr];
         [arrVideo addObject:xxVideo];
     }
-    _dataSource = arrVideo;
-    return _dataSource;
+    return arrVideo;
 }
 
 #pragma mark - UITableViewDataSource

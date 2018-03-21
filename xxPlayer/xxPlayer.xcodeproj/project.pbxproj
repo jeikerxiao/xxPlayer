@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		11053A0320623124002099E2 /* XXVideoUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 11053A0220623124002099E2 /* XXVideoUtil.m */; };
+		11053A0620623A75002099E2 /* XXFileUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 11053A0520623A75002099E2 /* XXFileUtil.m */; };
 		1154E4222060B1E3002F9D37 /* UIImage+Image.m in Sources */ = {isa = PBXBuildFile; fileRef = 1154E41F2060B1E3002F9D37 /* UIImage+Image.m */; };
 		1154E4232060B1E3002F9D37 /* UITabBarController+tabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1154E4202060B1E3002F9D37 /* UITabBarController+tabBarController.m */; };
 		1154E4292060B1F2002F9D37 /* JDLTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 1154E4272060B1F2002F9D37 /* JDLTabBar.m */; };
@@ -80,6 +82,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		11053A0120623124002099E2 /* XXVideoUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XXVideoUtil.h; sourceTree = "<group>"; };
+		11053A0220623124002099E2 /* XXVideoUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XXVideoUtil.m; sourceTree = "<group>"; };
+		11053A0420623A75002099E2 /* XXFileUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XXFileUtil.h; sourceTree = "<group>"; };
+		11053A0520623A75002099E2 /* XXFileUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XXFileUtil.m; sourceTree = "<group>"; };
 		1154E41E2060B1E3002F9D37 /* UITabBarController+tabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBarController+tabBarController.h"; sourceTree = "<group>"; };
 		1154E41F2060B1E3002F9D37 /* UIImage+Image.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Image.m"; sourceTree = "<group>"; };
 		1154E4202060B1E3002F9D37 /* UITabBarController+tabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBarController+tabBarController.m"; sourceTree = "<group>"; };
@@ -533,6 +539,10 @@
 			children = (
 				116D5492205FB664001841AA /* IPUtil.h */,
 				116D5493205FB664001841AA /* IPUtil.m */,
+				11053A0120623124002099E2 /* XXVideoUtil.h */,
+				11053A0220623124002099E2 /* XXVideoUtil.m */,
+				11053A0420623A75002099E2 /* XXFileUtil.h */,
+				11053A0520623A75002099E2 /* XXFileUtil.m */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -778,6 +788,7 @@
 				116D5457205F93CA001841AA /* DDData.m in Sources */,
 				1154E4292060B1F2002F9D37 /* JDLTabBar.m in Sources */,
 				116D5481205F93D9001841AA /* DDFileLogger.m in Sources */,
+				11053A0320623124002099E2 /* XXVideoUtil.m in Sources */,
 				1154E43B2060B3AE002F9D37 /* XXPictureViewController.m in Sources */,
 				116D5450205F93CA001841AA /* HTTPConnection.m in Sources */,
 				116D5479205F93D9001841AA /* DDTTYLogger.m in Sources */,
@@ -793,6 +804,7 @@
 				1154E4B42060FEF1002F9D37 /* XXVideo.m in Sources */,
 				116D5452205F93CA001841AA /* WebSocket.m in Sources */,
 				116D547B205F93D9001841AA /* ContextFilterLogFormatter.m in Sources */,
+				11053A0620623A75002099E2 /* XXFileUtil.m in Sources */,
 				1154E43E2060B3B7002F9D37 /* XXMeViewController.m in Sources */,
 				116D548B205F996F001841AA /* MyHttpServer.m in Sources */,
 			);

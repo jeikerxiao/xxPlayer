@@ -79,6 +79,7 @@
         title.frame = CGRectMake(kVerticalSpace, 0 , kScreenWidth - kVerticalSpace*2, 30);
         _vedioBg.frame =  CGRectMake(0, title.frame.size.height , kScreenWidth,200);
         [_vedioBg sd_setImageWithURL:[NSURL URLWithString:video.image] placeholderImage:[UIImage imageNamed:@"PlayerBackground"]];
+//        [_vedioBg setImage:_video.picture];
         _playBtn.frame = CGRectMake((kScreenWidth - 72)/2, title.frame.size.height+ (_vedioBg.frame.size.height - 72)/2  , 72, 72);
         _video.curCellHeight = 230;
         

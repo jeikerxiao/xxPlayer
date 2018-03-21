@@ -9,6 +9,7 @@
 #import "XXHttpServerViewController.h"
 #import "AppDelegate.h"
 #import "IPUtil.h"
+#import "Masonry.h"
 
 @interface XXHttpServerViewController ()
 
@@ -28,10 +29,23 @@
     AppDelegate *app = (AppDelegate *)[[UIApplication  sharedApplication] delegate];
     [app startServer];
     
-    UISwitch *switchButton = [[UISwitch alloc] initWithFrame:CGRectMake(100, 100, 20, 10)];
+    UISwitch *switchButton = [[UISwitch alloc] init];
     [switchButton setOn:YES];
     [switchButton addTarget:self action:@selector(switchAction:) forControlEvents:UIControlEventValueChanged];
     [self.view addSubview:switchButton];
+    
+    UILabel* label = [[UILabel alloc]init];
+    label.numberOfLines = 0;
+    label.text = [NSString stringWithFormat:@"http://%@:8080",[IPUtil getIPv4]];
+    [self.view addSubview:label];
+    
+    [switchButton mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.center.equalTo(self.view);
+    }];
+    [label mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.equalTo(self.view);
+        make.top.equalTo(switchButton.mas_bottom).with.offset(30);
+    }];
 }
 
 - (void)switchAction:(id)sender {
@@ -47,7 +61,6 @@
         [app stopServer];
         NSLog(@"关");
     }
-    
 }
 
 @end
