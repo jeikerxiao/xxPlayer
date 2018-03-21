@@ -2,6 +2,13 @@
 
 功能：使用HttpServer 从电脑端上传视频到手机上，在手机的列表中进行播放。
 
+Xcode 9
+
+使用三方库：
+
+* CocoaHTTPServer
+* KYVedioPlayer
+
 # 工程使用
 
 进入  xxPlayer 目录, Podfile同级：
