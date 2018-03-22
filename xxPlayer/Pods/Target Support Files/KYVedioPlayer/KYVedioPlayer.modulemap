@@ -1,0 +1,6 @@
+framework module KYVedioPlayer {
+  umbrella header "KYVedioPlayer-umbrella.h"
+
+  export *
+  module * { export * }
+}
